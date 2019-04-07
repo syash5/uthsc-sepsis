@@ -1,0 +1,181 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <title>UTHSC</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+        <link rel="icon" href="{% static 'uth.jpg' %}">
+
+
+
+
+
+
+
+
+
+        <link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+
+
+
+
+
+
+        <script> $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })</script>
+
+
+
+
+
+    </head>
+
+
+
+
+
+
+
+
+
+
+    <body>
+
+
+
+    <header>
+            <nav>
+               <div class="menu-icon">
+                  <i class="fa fa-bars fa-2x"></i>
+               </div>
+               <div class="logo" >
+                 <h1><a style="width=1%;height=5%;" href="{% url 'home_page' %}"><img src="{% static 'uth.jpg' %}" alt="The University of Tennessee Health Science Center" /></a></h1>
+               </div>
+               <div class="menu">
+                  <ul>
+
+                    <li><a href="{% url 'query_create' %}">Query</a></li>
+
+                  </ul>
+               </div>
+            </nav>
+         </header>
+
+
+
+
+
+
+
+        <div class="wrapper">
+            {% block content %}
+
+
+            {% endblock %}
+        </div>
+
+    </body>
+
+
+
+
+
+<footer class="section footer-classic context-dark bg-image" style="background: black;">
+        <div class="container">
+
+
+
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                <p>UTHSC</p>
+                              <blockquote >
+              <p>
+               “Improving population health”
+             </p>
+
+                    </blockquote>
+
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>The University of Tennessee Health Science Center
+Memphis, Tennessee 38163</span><span>. </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>Center for Biomedical Informatics
+50 N. Dunlap, 483R
+Memphis, TN 38103</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">ubynum@uthsc.edu</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>Phones:</dt>
+                <dd><a >Main: (901) 448-5500</a> <span>or</span> <a >TDD: (901) 448-7382</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="{% url 'home_page' %}">Home</a></li>
+                <li><a href="{% url 'query_create' %}">Query</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="https://www.facebook.com/uthsc"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+            <div class="col"><a class="social-inner" href="https://twitter.com/uthsc"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="https://www.instagram.com/uthsc/"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+
+        </div>
+      </footer>
+
+
+
+
+
+
+</html>

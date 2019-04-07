@@ -1,0 +1,28 @@
+sepsis_label	sepsis_name	sepsis_subtype	glucose	Hemoglobin	capillary_ph	color_score
+1	sepsis	severe	192	8.4	7.3	0.55
+1	sepsis	severe	180	8.0	6.8	0.59
+1	sepsis	severe	176	7.4	7.2	0.60
+2	no_sepsis	no	86 	6.2	4.7	0.80
+2	no_sepsis	no	84 	6.0	4.6	0.79
+2	no_sepsis	no	80 	5.8	4.3	0.77
+2	no_sepsis	no	80 	5.9 	4.3	0.81
+2	no_sepsis	no	76	5.8	4.0	0.81
+1	sepsis	severe	178	7.1	7.8	0.92
+1	sepsis	severe	172	7.4	7.0	0.89
+1	sepsis	early	166	6.9	7.3	0.93
+1	sepsis	severe	172	7.1	7.6	0.92
+1	sepsis	severe	154	7.0	7.1	0.88
+1	sepsis	early	164	7.3	7.7	0.70
+1	sepsis	severe	152	7.6	7.3	0.69
+1	sepsis	severe	156	7.7	7.1	0.69
+1	sepsis	severe	156	7.6	7.5	0.67
+1	sepsis	early	168	7.5	7.6	0.73
+1	sepsis	severe	162	7.5	7.1	0.83
+2	no_sepsis	no	162	7.4	7.2	0.85
+2	no_sepsis	no	160	7.5	7.5	0.86
+2	no_sepsis	no	156	7.4	7.4	0.84
+2	no_sepsis	no	140	7.3	7.1	0.87
+2	no_sepsis	no	170	7.6	7.9	0.88
+
+
+
